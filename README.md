@@ -16,12 +16,14 @@ Tout d'abord, téléchargez et décompressez le dossier complet avant de passer 
 
 Avant de pouvoir exécuter correctement les scripts, il va falloir créer un environnement virtuel.
 
-Pour commencer, ouvrez le terminal de votre système d'exploitation, assurez-vous d'être dans le dossier que vous avez téléchargé et tapez la commande suivante:
+Pour commencer, ouvrez le terminal,
+allez dans le dossier que vous avez téléchargé
+(ce n'est pas obligatoire, mais préférable pour vous y retrouver) et tapez la commande suivante :
 
 `python -m venv env`
 
 
-exemple:
+Exemple :
 ```
 C:\BooksOnline>python -m venv env
 ```
@@ -37,14 +39,15 @@ Si vous êtes sur Windows il faut exécuter le fichier `activate.bat` qui se tro
 
 ### Installation des paquets du fichier requirements.txt
 
-Pour que les scripts python puissent correctement s'exécuter vous aurez besoin d'installer les paquets se trouvant dans le fichier "requirements.txt"
+Pour que les scripts python puissent correctement s'exécuter vous aurez besoin d'installer les paquets se trouvant dans le fichier **requirements.txt**
 
 
-Une fois que l'environnement virtuel est activé, tapez la commande:
+Une fois que l'environnement virtuel est bien activé, assurez-vous d'être dans le dossier que vous avez téléchargé,
+là où se trouve le fichier **requirements.txt** et tapez la commande :
 
 `pip install -r requirements.txt`
 
-Vous pouvez vérifier que les paquets sont bien installé avec la commande:
+Vous pouvez vérifier que les paquets sont bien installé avec la commande :
 
 `pip freeze`
 

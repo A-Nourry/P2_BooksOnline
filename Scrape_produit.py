@@ -61,8 +61,22 @@ def scrape(url, en_tete):
         print('Argument invalide')
 
 
-if __name__ == '__main__':
+def mkcsv(file_name, en1, en2, en3, en4, en5, en6, en7, en8, en9, en10):
+    en_tetes = ['product_page_url', 'universal_ product_code', 'title', 'price_including_tax',
+                'price_excluding_tax', 'number_available', 'product_description', 'category', 'review_rating',
+                'image_url']
 
+    with open('Output/' + file_name, 'w', encoding="utf-8") as file:
+        writer = csv.writer(file, delimiter=',')
+        writer.writerow(en_tetes)
+
+        for infos in zip(en1, en2, en3, en4, en5, en6, en7, en8, en9, en10):
+            writer.writerow(infos)
+
+    print("le fichier " + file_name + " a été créé avec succès !")
+
+
+if __name__ == '__main__':
     lien = 'http://books.toscrape.com/catalogue/dune-dune-1_151/index.html'
 
     page_url = [scrape(lien, 'link')]
@@ -76,18 +90,5 @@ if __name__ == '__main__':
     review = [scrape(lien, 'rev')]
     img_url = [scrape(lien, 'img')]
 
-    # liste des informations
-    en_tetes = ['product_page_url', 'universal_ product_code', 'title', 'price_including_tax',
-                'price_excluding_tax', 'number_available', 'product_description', 'category', 'review_rating',
-                'image_url']
-
-    # CSV
-    with open('infos_produit.csv', 'w') as file:
-        writer = csv.writer(file, delimiter=',')
-        writer.writerow(en_tetes)
-
-        for infos in zip(page_url, upc, titre, price_inclu_tax, price_exclu_tax, quantite, description, category,
-                         review, img_url):
-            writer.writerow(infos)
-
-    print("fichier infos_produit.csv créé avec succès !")
+    mkcsv('infos_produit.csv', page_url, upc, titre, price_inclu_tax, price_exclu_tax, quantite, description, category,
+          review, img_url)

@@ -3,8 +3,12 @@ Les scripts suivants ont pour but d'extraire les données
 du site http://books.toscrape.com/ et de les enregistrer dans un fichier au format .csv:
 
 - **Scrape_produit.py** : Extrait les informations du livre "Dune" et les enregistre dans un fichier nommé **infos_produit.csv**
+  
+
 - **Scrape_categorie.py** : Extrait les informations de toute une catégorie et les enregistre dans un fichier nommé **infos_categorie.csv**
-- _d'autres scripts à venir..._
+
+
+- **Scrape_all.py** : Extrait les informations de tous les livres du site et les enregistre dans un fichier .csv par catégorie.
 
 ## Comment exécuter les scripts
 
@@ -13,7 +17,7 @@ du site http://books.toscrape.com/ et de les enregistrer dans un fichier au form
 
 Tout d'abord, téléchargez et décompressez le dossier complet avant de passer aux étapes suivantes.
 
-### Environnement virtuel
+### 1 . Environnement virtuel
 
 Avant de pouvoir exécuter correctement les scripts, il va falloir créer un environnement virtuel.
 
@@ -38,7 +42,7 @@ Mac/Linux: `source env/bin/activate`
 
 Si vous êtes sur Windows il faut exécuter le fichier **activate.bat** qui se trouve dans **env/Scripts/** en tapant directement `env\Scripts\activate.bat`
 
-### Installation des paquets du fichier _requirements.txt_
+### 2 . Installation des paquets du fichier _requirements.txt_
 
 Pour que les scripts python puissent correctement s'exécuter vous aurez besoin d'installer les paquets se trouvant dans le fichier **requirements.txt**
 

@@ -8,7 +8,11 @@ du site web http://books.toscrape.com/ et de les enregistrer dans un fichier au 
 - **Scrape_categorie.py** : Extrait les informations des livres de la catégorie **Fantasy** et génère un fichier nommé **infos_categorie.csv**.
 
 
-- **Scrape_all.py** : Extrait les informations de tous les livres du site web et génère plusieurs fichiers **.csv** par catégories.
+- **Scrape_all.py** : Extrait les informations de tous les livres du site web et génère plusieurs fichiers
+  **.csv** par catégories, et les enregistre dans un dossier nommé **produits_par_catégorie/Nom_De_La_Catégorie/**
+
+Ainsi qu'un script nommé **dl_all_images.py** qui télécharge tous les fichiers images de chaque page produit et les
+enregistre dans un dossier nommé **produits_par_catégorie/Nom_De_La_Catégorie/images/**
 
 ## Comment exécuter les scripts
 

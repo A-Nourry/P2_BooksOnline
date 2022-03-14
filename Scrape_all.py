@@ -1,3 +1,4 @@
+import os
 import requests
 from bs4 import BeautifulSoup
 import csv
@@ -15,7 +16,7 @@ for i in range(1, 51):
     soup = BeautifulSoup(reponse.content, 'html.parser')
     base = 'http://books.toscrape.com/catalogue/'
 
-    print('lien de la page ' + str(i) + ' récupéré (' + url + ')')
+    print('liens de la page ' + str(i) + ' récupérés : ' + url)
 
     links = soup.findAll('h3')
 
@@ -31,8 +32,8 @@ links_by_categories = {}
 for book in liens:
     Slinks = [Scrape_categorie.get_info(book)]
 
-    for bookies in Slinks:
-        links_by_categories[bookies] = Scrape_produit.scrape(book, 'cat')
+    for books in Slinks:
+        links_by_categories[books] = Scrape_produit.scrape(book, 'cat')
 
         print('Page ' + book + ' scrapé avec succès !')
 
@@ -66,7 +67,11 @@ en_tetes = ['product_page_url', 'universal_ product_code', 'title', 'price_inclu
             'image_url']
 
 for info in range(50):
-    with open(categories[info] + '.csv', 'w', encoding="utf-8") as file:
+    if not os.path.isdir('produits_par_catégories/' + categories[info] + '/'):
+        os.makedirs('produits_par_catégories/' + categories[info] + '/')
+
+    with open('produits_par_catégories/' + categories[info] + '/' + categories[info] + '.csv', 'w', encoding="utf-8")\
+            as file:
         writer = csv.writer(file, delimiter=',')
         writer.writerow(en_tetes)
 

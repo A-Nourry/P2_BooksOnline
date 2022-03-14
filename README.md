@@ -1,25 +1,29 @@
 # Programme d'extraction des prix
 Les scripts suivants ont pour but d'extraire les données
-du site http://books.toscrape.com/ et de les enregistrer dans un fichier au format .csv:
+du site web http://books.toscrape.com/ et de les enregistrer dans un fichier au format **.csv** :
 
-- **Scrape_produit.py** : Extrait les informations du livre "Dune" et les enregistre dans un fichier nommé **infos_produit.csv**
+- **Scrape_produit.py** : Extrait les informations du livre **Dune** et génère un fichier nommé **infos_produit.csv**.
   
 
-- **Scrape_categorie.py** : Extrait les informations de toute une catégorie et les enregistre dans un fichier nommé **infos_categorie.csv**
+- **Scrape_categorie.py** : Extrait les informations des livres de la catégorie **Fantasy** et génère un fichier nommé **infos_categorie.csv**.
 
 
-- **Scrape_all.py** : Extrait les informations de tous les livres du site et les enregistre dans un fichier .csv par catégorie.
+- **Scrape_all.py** : Extrait les informations de tous les livres du site web et génère plusieurs fichiers
+  **.csv** par catégories, et les enregistre dans un dossier nommé **produits_par_catégorie/Nom_De_La_Catégorie/**
+
+Ainsi qu'un script nommé **dl_all_images.py** qui télécharge tous les fichiers images de chaque page produit et les
+enregistre dans un dossier nommé **produits_par_catégorie/Nom_De_La_Catégorie/images/**
 
 ## Comment exécuter les scripts
 
 - __Pré-requis : Python doit être installé sur votre système__
 
 
-Tout d'abord, téléchargez et décompressez le dossier complet avant de passer aux étapes suivantes.
+Tout d'abord, téléchargez et décompressez le dossier du code avant de passer aux étapes suivantes.
 
 ### 1 . Environnement virtuel
 
-Avant de pouvoir exécuter correctement les scripts, il va falloir créer un environnement virtuel.
+Avant de pouvoir exécuter correctement les scripts, il faut créer un environnement virtuel.
 
 Pour commencer, ouvrez le terminal,
 allez dans le dossier que vous avez téléchargé
@@ -36,7 +40,7 @@ C:\BooksOnline>python -m venv env
 
 Cette commande permet de créer l'environnement virtuel **env** et également un dossier **env** dans le répertoire dans lequel vous vous trouvez.
 
-Maintenant que l'environnement virtuel est créé, il faut l'activer. Pour cela taper la commande suivante :
+Maintenant que l'environnement virtuel est créé, il faut l'activer. Pour cela tapez la commande suivante :
 
 Mac/Linux: `source env/bin/activate`
 
@@ -58,14 +62,4 @@ Vous pouvez vérifier que les paquets sont bien installé avec la commande :
 
 ### Maintenant, vous pouvez exécuter les scripts avec succès !
 
-Exemple pour exécuter un script via le terminal : `python3 Page_produit.py`
-
-
-
-
-
-
-
-
-
-
+Exemple pour exécuter un script via le terminal : `python3 infos_produit.py`

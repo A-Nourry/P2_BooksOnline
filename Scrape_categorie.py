@@ -37,19 +37,21 @@ if __name__ == '__main__':
             a = link.find('a')
             lin = a['href']
             liens.append(base + lin[9:])
+        print("liens de la page" + str(i) + " récupérés")
 
     lien0 = []
 
     for books in liens:
         info_liens = get_info(books)
         lien0.append(info_liens)
+        print("produit " + books + " scrapé")
 
     # CSV
     en_tetes = ['product_page_url', 'universal_ product_code', 'title', 'price_including_tax',
                 'price_excluding_tax', 'number_available', 'product_description', 'category', 'review_rating',
                 'image_url']
 
-    with open('Output/infos_categorie.csv', 'w', encoding="utf-8") as file:
+    with open('infos_categorie.csv', 'w', encoding="utf-8") as file:
         writer = csv.writer(file, delimiter=',')
         writer.writerow(en_tetes)
 

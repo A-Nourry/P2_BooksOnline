@@ -2,10 +2,11 @@
 Les scripts suivants ont pour but d'extraire les données
 du site web http://books.toscrape.com/ et de les enregistrer dans un fichier au format **.csv** :
 
-- **Scrape_produit.py** : Extrait les informations du livre **Dune** et génère un fichier nommé **infos_produit.csv**.
+- **Scrape_produit.py** : Extrait les informations du livre **Dune** et génère un fichier nommé **infos_produit_Dune.csv**.
   
 
-- **Scrape_categorie.py** : Extrait les informations des livres de la catégorie **Fantasy** et génère un fichier nommé **infos_categorie.csv**.
+- **Scrape_categorie.py** : Extrait les informations des livres de la catégorie **Fantasy** et génère un fichier nommé
+- **infos_categorie_fantasy.csv**.
 
 
 - **Scrape_all.py** : Extrait les informations de tous les livres du site web et génère plusieurs fichiers

@@ -51,11 +51,11 @@ if __name__ == '__main__':
                 'price_excluding_tax', 'number_available', 'product_description', 'category', 'review_rating',
                 'image_url']
 
-    with open('infos_categorie.csv', 'w', encoding="utf-8") as file:
+    with open('infos_categorie_fantasy.csv', 'w', encoding="utf-8") as file:
         writer = csv.writer(file, delimiter=',')
         writer.writerow(en_tetes)
 
         for infos in lien0:
             writer.writerow(infos)
 
-        print("le fichier infos_categorie.csv a été généré avec succès !")
+        print("le fichier infos_categorie_fantasy.csv a été généré avec succès !")

@@ -87,4 +87,4 @@ def download(urls, pathname):
 
 for cats in categories:
     for images in links_by_categories_inv[cats]:
-        download(images, 'produits_par_catégories_test/' + cats + '/images/')
+        download(images, 'produits_par_catégories/' + cats + '/images/')
